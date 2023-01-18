@@ -1,0 +1,21 @@
+0 silly argv {
+0 silly argv   _: [ 'run' ],
+0 silly argv   lernaVersion: '6.4.1',
+0 silly argv   '$0': 'node_modules\\lerna\\cli.js',
+0 silly argv   script: 'test'
+0 silly argv }
+1 notice cli v6.4.1
+2 verbose rootPath C:\Users\atik.shaikh\OneDrive - Emtec Inc\Desktop\Final Builds\Lerna
+3 error JSONError: Unexpected token "/" (0x2F) in JSON at position 600 while parsing near "...rewired build\",\n    // \"test\": \"react-ap..." in packages\shell-app\package.json
+3 error
+3 error [0m [90m 21 |[39m     [32m"start"[39m[33m:[39m [32m"react-app-rewired start"[39m[33m,[39m[0m
+3 error [0m [90m 22 |[39m     [32m"build"[39m[33m:[39m [32m"react-app-rewired build"[39m[33m,[39m[0m
+3 error [0m[31m[1m>[22m[39m[90m 23 |[39m     [90m// "test": "react-app-rewired test",[39m[0m
+3 error [0m [90m    |[39m     [31m[1m^[22m[39m[0m
+3 error [0m [90m 24 |[39m     [32m"test"[39m[33m:[39m [32m"react-scripts test"[39m[33m,[39m[0m
+3 error [0m [90m 25 |[39m     [32m"eject"[39m[33m:[39m [32m"react-app-rewired eject"[39m[0m
+3 error [0m [90m 26 |[39m   }[33m,[39m[0m
+3 error
+3 error     at parseJson (C:\Users\atik.shaikh\OneDrive - Emtec Inc\Desktop\Final Builds\Lerna\node_modules\parse-json\index.js:29:21)
+3 error     at parse (C:\Users\atik.shaikh\OneDrive - Emtec Inc\Desktop\Final Builds\Lerna\node_modules\load-json-file\index.js:15:9)
+3 error     at module.exports (C:\Users\atik.shaikh\OneDrive - Emtec Inc\Desktop\Final Builds\Lerna\node_modules\load-json-file\index.js:18:47)
