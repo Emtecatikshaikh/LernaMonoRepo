@@ -21,7 +21,8 @@ module.exports = function override(config, env) {
  
   config = rewireBabelLoader.include(
     config,
-    resolveApp("../component-app")
+    resolveApp("../component-app"),
+    resolveApp("../functions")
   );
  
   // black-list some modules from the babel-loader pipeline
