@@ -4,7 +4,8 @@
         "packages/*"
     ],
     "scripts": {
-        "start":"lerna exec --scope shell-app -- yarn start"
+        "start":"lerna exec --scope shell-app -- yarn start",
+        "test": "lerna exec --scope login-form -- yarn test"
     },
     "devDependencies": {
         "lerna": "^6.4.1"
