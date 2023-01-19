@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import { Form, Button, Alert } from "react-bootstrap";
+import React, { useState } from 'react';
+import { Form, Button, Alert } from 'react-bootstrap';
 
-const Login = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
+export const FormComponent = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
   const [showUser, setShowUser] = useState(false);
 
   const handleSubmit = (e) => {
@@ -12,16 +12,16 @@ const Login = () => {
     e.preventDefault();
     if (validateEmail(email)) {
       setShowUser(true);
-      setError("");
+      setError('');
       return;
     }
-    setError("Email is not valid");
+    setError('Email is not valid');
     return false;
   };
 
   const resetForm = () => {
-    setEmail("");
-    setPassword("");
+    setEmail('');
+    setPassword('');
     setShowUser(false);
   };
 
@@ -66,7 +66,7 @@ const Login = () => {
           variant="secondary"
           data-testid="reset"
           onClick={resetForm}
-          style={{ marginLeft: "5px" }}
+          style={{ marginLeft: '5px' }}
         >
           Reset
         </Button>
@@ -82,5 +82,3 @@ export const validateEmail = (email) => {
   }
   return false;
 };
-
-export default Login;

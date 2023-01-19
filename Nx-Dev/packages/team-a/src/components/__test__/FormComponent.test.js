@@ -1,11 +1,11 @@
 import {fireEvent, render,screen} from "@testing-library/react";
-import Login,{validateEmail} from'../Login';
+import {FormComponent ,validateEmail} from'../FormComponent';
 import userEvent from "@testing-library/user-event"
 
 describe("Testing the Login Component",() => {
     
     test("Render the login form with 2 buttons",async () => {
-        render(<Login />);
+        render(<FormComponent />);
         const buttonList = await screen.findAllByRole("button");
         expect(buttonList).toHaveLength(2);
     })
@@ -16,21 +16,21 @@ describe("Testing the Login Component",() => {
     })
 
     test("Email Input should accept only email", () => {
-        render(<Login />);
+        render(<FormComponent />);
         const email = screen.getByPlaceholderText("Enter email");
         userEvent.type(email,"atikshaikh@gmail.com");
         expect(email.value).toMatch("atikshaikh@gmail.com");
     })
 
     test("Password input should have type as password", () => {
-        render(<Login />)
+        render(<FormComponent />)
         const password = screen.getByPlaceholderText("Password");
         userEvent.type(password,"1234567");
         expect(password).toHaveAttribute("type","password");
     })
 
     test("should be able to reset the form",() => {
-        const {  getByTestId} = render(<Login />)
+        const {  getByTestId} = render(<FormComponent />)
         // eslint-disable-next-line testing-library/prefer-screen-queries
         const resetBtn = getByTestId("reset");
         const emailNode = screen.getByPlaceholderText("Enter email");
@@ -42,7 +42,7 @@ describe("Testing the Login Component",() => {
     })
 
     test("should be able to submit the form",() => {
-        render(<Login />)
+        render(<FormComponent />)
         const submitBtn = screen.getByTestId("submit");
         const emailNode = screen.getByPlaceholderText("Enter email");
         const passNode = screen.getByPlaceholderText("Password");
@@ -57,7 +57,7 @@ describe("Testing the Login Component",() => {
     })
 
     test("should display error if incorrect email address",() => {
-        render(<Login />)
+        render(<FormComponent />)
         const submitBtn = screen.getByTestId("submit");
         const emailNode = screen.getByPlaceholderText("Enter email");
         const passNode = screen.getByPlaceholderText("Password");

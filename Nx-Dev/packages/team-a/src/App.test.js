@@ -1,9 +1,9 @@
 import {render,screen} from "@testing-library/react"
-import App from "./App"
+import {App} from "./App"
 
 test("header renders with react component testing tutorial in the document",() => {
     render(<App />);
-    const linkElement = screen.getByText(/This is React Component Testing Tutorial/i);
+    const linkElement = screen.getByText(/I'm from the Team-A App/i);
     expect(linkElement).toBeInTheDocument();
 });
 

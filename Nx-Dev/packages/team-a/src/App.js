@@ -1,23 +1,22 @@
 import React from "react";
 import "./App.css";
 import { Col, Row } from "react-bootstrap";
-import Login from "./components/Login";
+import {FormComponent} from "./components/FormComponent";
 
-const App = () => {
+export const App = () => {
   return (
     <div className="Container app-container">
       <Row>
         <Col>
-          <h1>This is React Component Testing Tutorial</h1>
+          {/* <h1>This is React Component Testing Tutorial</h1> */}
+          <h2>I'm from the Team-A App</h2>
         </Col>
       </Row>
       <Row>
         <Col>
-            <Login data-testid="child" />
+          <FormComponent data-testid="child" />
         </Col>
       </Row>
     </div>
   );
 };
-
-export default App;
