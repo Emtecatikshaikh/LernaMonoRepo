@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "npx nx run shell-app:start"
+    "start": "npx nx run shell-app:start",
+    "test":"npx nx run team-a:test --all=true"
   },
   "private": true,
   "dependencies": {
