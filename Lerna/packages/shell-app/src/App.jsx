@@ -6,8 +6,9 @@ const App = () => {
   return (
     <div className="App">
       <Button />
-      {/* <CallBack /> */}
-      <Timer />
+      Testing CallBack Functions now !
+      <CallBack />
+      {/* <Timer /> */}
     </div>
   )
 }
